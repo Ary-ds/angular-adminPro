@@ -1,0 +1,51 @@
+<p>pages works!</p>
+
+
+<div id="main-wrapper">
+
+  
+
+    <app-header></app-header>
+    
+    <app-sidebar></app-sidebar>
+  
+    <div class="page-wrapper">
+  
+      <!-- ============================================================== -->
+      <!-- Container fluid  -->
+      <!-- ============================================================== -->
+      <div class="container-fluid">
+             <!-- bread crumbs -->
+             <app-bread-crumbs></app-bread-crumbs>
+             <!-- donde van mis rutas  -->
+  
+              <!-- Start Page Content -->
+                  <!-- ============================================================== -->
+                  <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                              <!-- mis routers personalizadas -->
+                                <!-- This is some text within a card block. -->
+                                <!-- router-4 crear  -->
+                                <router-outlet></router-outlet>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+  
+  
+                  <!-- footer -->
+              <!-- ============================================================== -->
+              <footer class="footer">
+                © 20xx Admin Pro by wrappixel.com
+            </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+  
+      </div>
+    </div>
+  
+  </div>
