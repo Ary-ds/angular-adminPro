@@ -2,35 +2,38 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
-import { NotPagefoundComponent } from './pages/not-pagefound/not-pagefound.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { BreadCrumbsComponent } from './shared/bread-crumbs/bread-crumbs.component';
-import { SidebarComponent } from './shared/sidebar/sidebar.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { ProgressComponent } from './pages/progress/progress.component';
-import { Grafica1Component } from './pages/grafica1/grafica1.component';
-import { AppRoutingModule } from './app-routing.module';
-import { PagesComponent } from './pages/pages.component';
+import { NotPagefoundComponent } from './not-pagefound/not-pagefound.component';
+
+import { RouterModule } from '@angular/router';
+
+
+// modulos
+// import { AppRoutingModule } from './app-routing.module';
+import { PagesModule } from './pages/pages.module';
+import { AuthModule } from './auth/auth.module';
+import { PagesRoutingModule } from './pages/pages.routing';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
+    // LoginComponent,
+    // RegisterComponent,
     NotPagefoundComponent,
-    DashboardComponent,
-    BreadCrumbsComponent,
-    SidebarComponent,
-    HeaderComponent,
-    ProgressComponent,
-    Grafica1Component,
-    PagesComponent
+    // BreadCrumbsComponent,
+    // SidebarComponent,
+    // HeaderComponent,
+    // DashboardComponent,
+    // ProgressComponent,
+    // Grafica1Component,
+    // PagesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    // AppRoutingModule,
+    PagesModule,
+    RouterModule,
+    AuthModule,
+    PagesRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
